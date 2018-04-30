@@ -32,7 +32,7 @@ public class ConfigManager {
             br = new BufferedReader(new FileReader(groupsfile));
             while ((line = br.readLine()) != null) {
                 String[] row = line.split(cvsSplitBy);
-                Group g = new Group(row[0], row[1]);
+                Group g = new Group(row[0]);
                 for (int i = 2; i < row.length; i++) {
                     g.addPerson(new Person(row[i]));
                 }
@@ -42,7 +42,7 @@ public class ConfigManager {
             br = new BufferedReader(new FileReader(pranksfile));
             while ((line = br.readLine()) != null) {
                 String[] row = line.split(cvsSplitBy);
-                pranks.add(new Prank(row[0], row[1], row[2]));
+                pranks.add(new Prank(row[0], row[1]));
             }
 
         } catch (FileNotFoundException e) {

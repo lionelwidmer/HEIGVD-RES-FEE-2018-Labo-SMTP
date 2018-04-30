@@ -34,3 +34,14 @@ $ java -jar MockMock.jar -p <SMTP_PORT> -h <WEB_PORT>
 Where <SMTP_PORT> is the desired SMTP portand <WEB_PORT>is the desired port for the Web interface
 
 When you want to exit MockMock, interrupt MockMock by doing CTRL+C, or kill the associated Java (or javaw on Windows) process
+
+## Tool configuration and usage
+
+First, you need to clone the repo
+```
+$ git clone https://github.com/lionelwidmer/HEIGVD-RES-FEE-2018-Labo-SMTP.git
+```
+
+Then, inside the repo you find a 'config' directory.
+This directory contains 2 files :
+* groups.csv : A CSV file (semicolumn separated) containing the list of groups, with all e-mail addresses of each group

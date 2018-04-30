@@ -4,13 +4,11 @@ public class Prank {
     // Instance variables
     private String subject;
     private String body;
-    private String id;
 
     // Constructor
-    public Prank(String id, String subject, String body) {
+    public Prank (String subject, String body) {
         this.subject = subject;
         this.body = body;
-        this.id = id;
     }
 
     // Methods
@@ -19,8 +17,5 @@ public class Prank {
     }
     public String getSubject() {
         return this.subject;
-    }
-    public String getId() {
-        return this.id;
     }
 }
