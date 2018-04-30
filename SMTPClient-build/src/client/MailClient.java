@@ -55,7 +55,7 @@ public class MailClient implements IMailClient{
         outputStream.writeBytes("DATA" + System.lineSeparator() +
                 "from: " + from + System.lineSeparator() +
                 "to: " + to + System.lineSeparator() +
-                "subject: " + subject + System.lineSeparator() +
+                "subject: " + subject + System.lineSeparator() + System.lineSeparator() +
                 message + System.lineSeparator() +
                 "." + System.lineSeparator());
         while ((serverResponse = bufferedReader.readLine()) != null) {
