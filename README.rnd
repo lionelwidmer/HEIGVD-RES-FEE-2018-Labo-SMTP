@@ -1,6 +1,6 @@
-# HEIGVD-RES-FEE-2018-Labo-SMTP
+# HEIGVD-RES-FEE-2018-Labo-SMTP #
 
-## Project description
+## Project description ##
 This project implements the **SMTP** client protocol. In addition to simply send e-mails with hardcoded text to hardcoded receipents, it also contains a part that can read
 configuration files containing group of people to which you want to send an e-mail. The a-mail subject and body are also contained in a predefined editable configuration file.
 
@@ -12,7 +12,7 @@ This project contains as well a Mock SMTP server, in case you want to do some te
 The Mock SMTP server (called MockMock) has been downloaded from the following GIT repository :
 https://github.com/tweakers-dev/MockMock
 
-## Instructions to use MockMock (Mock SMTP) server
+## Instructions to use MockMock (Mock SMTP) server ##
 MockMock will listen on 2 ports :
 * SMTP port : The port on which it will listen for e-mails. Default : 25
 * Web port : The port oif the Web interface, where you can see the e-mails received by the server. Default : 8282
