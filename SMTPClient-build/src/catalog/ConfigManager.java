@@ -12,12 +12,15 @@ public class ConfigManager {
     private String configpath;
     private List<Group> groups;
     private List<Prank> pranks;
+    private String smtpServer;
+    private int smtpPort;
 
     // Constructor
     public ConfigManager(String configpath) {
         // Initialize some variables
         String groupsfile = configpath + "/groups.csv";
         String pranksfile = configpath + "/pranks.csv";
+        String configfile = configpath + "/config.csv";
         String cvsSplitBy = ";";
         BufferedReader br = null;
         String line = "";
@@ -39,10 +42,19 @@ public class ConfigManager {
                 groups.add(g);
             }
 
+            // Get list of pranks
             br = new BufferedReader(new FileReader(pranksfile));
             while ((line = br.readLine()) != null) {
                 String[] row = line.split(cvsSplitBy);
                 pranks.add(new Prank(row[0], row[1]));
+            }
+
+            // Get configuration
+            br = new BufferedReader(new FileReader(configfile));
+            while ((line = br.readLine()) != null) {
+                String[] row = line.split(cvsSplitBy);
+                smtpServer = row[1];
+                smtpPort = Integer.parseInt(row[2]);
             }
 
         } catch (FileNotFoundException e) {
@@ -66,5 +78,11 @@ public class ConfigManager {
     }
     public List<Prank> getPranks() {
         return this.pranks;
+    }
+    public String getSmtpServer() {
+        return this.smtpServer;
+    }
+    public int getSmtpPort() {
+        return this.smtpPort;
     }
 }

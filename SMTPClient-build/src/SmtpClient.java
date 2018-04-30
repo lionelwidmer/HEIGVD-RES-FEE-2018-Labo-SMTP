@@ -32,7 +32,7 @@ public class SmtpClient {
 
         // Connect to the server
         MailClient mailClient = new MailClient();
-        mailClient.connect("localhost", 25);
+        mailClient.connect(configManager.getSmtpServer(), configManager.getSmtpPort());
 
         // Get group and loop through all members to find out sender
         Group group = configManager.getGroups().get(groupId);
