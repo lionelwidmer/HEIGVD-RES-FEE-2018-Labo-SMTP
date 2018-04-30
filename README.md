@@ -17,8 +17,8 @@ MockMock will listen on 2 ports :
 * SMTP port : The port on which it will listen for e-mails. Default : 25
 * Web port : The port oif the Web interface, where you can see the e-mails received by the server. Default : 8282
 
-1. Go to the root of the repository
-2. Launch MockMock.jar : java -jar MockMock.jar
+1. [Go to the root of the repository]
+2. [Launch MockMock.jar : java -jar MockMock.jar]
 2.1 If you want to overrite the default ports (25 and 8282), launch MockMock.jar as following :
      java -jar MockMock.jar -p <SMTP_PORT> -h <WEB_PORT>
 	    Where :
