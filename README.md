@@ -44,4 +44,5 @@ $ git clone https://github.com/lionelwidmer/HEIGVD-RES-FEE-2018-Labo-SMTP.git
 
 Then, inside the repo you find a 'config' directory.
 This directory contains 2 files :
-* groups.csv : A CSV file (semicolumn separated) containing the list of groups, with all e-mail addresses of each group
+* groups.csv : A CSV file (semicolumn separated) containing the list of groups, with the e-mail addresses of each member of the group. The format is the following : <GROUP_NAME>;<EMAIL_1>;<EMAIL_2>;<EMAIL_3>;<EMAIL_N>
+* pranks.csv : A CSV file (semicolumn separated) containing the list of pranks. The format is the following : <PRANK_TITLE>;<PRANK_TEXT>
