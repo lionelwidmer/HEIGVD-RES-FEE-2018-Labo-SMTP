@@ -33,7 +33,7 @@ public class ConfigManager {
             while ((line = br.readLine()) != null) {
                 String[] row = line.split(cvsSplitBy);
                 Group g = new Group(row[0]);
-                for (int i = 2; i < row.length; i++) {
+                for (int i = 1; i < row.length; i++) {
                     g.addPerson(new Person(row[i]));
                 }
                 groups.add(g);
